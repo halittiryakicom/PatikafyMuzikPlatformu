@@ -1,1 +1,1 @@
-#Listeden nesne türeterek Linq ile içersinde sorgular yaptık.
+#Listeden nesne tÃ¼reterek Linq ile iÃ§ersinde sorgular yaptÄ±k.
