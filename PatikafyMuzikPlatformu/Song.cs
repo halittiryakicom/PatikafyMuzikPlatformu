@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 namespace PatikafyMuzikPlatformu
 {
-    public class Song : IComparable<Song>
+    public class Song
     {
         public string FullName { get; set; }
         public string MusicGenre { get; set; }
         public int Year { get; set; }
         public int Sales { get; set; }
 
-
-        public int CompareTo(Song? other)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
