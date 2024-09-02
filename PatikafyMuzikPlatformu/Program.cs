@@ -67,10 +67,14 @@ foreach (var s in sales)
 
 //2000 yılı öncesi çıkış yapmış ve pop müzik yapan sanatçılar
 Console.WriteLine("---------- 2000 yılı öncesi çıkış yapmış ve pop müzik yapan sanatçılar ----------");
-var result = musics.Where(item => item.Year < 2000 && item.MusicGenre.Contains("Pop")).OrderBy(item => item.FullName).ToList();
-foreach (var s in result)
+var result = musics.Where(item => item.Year < 2000 && item.MusicGenre.Contains("Pop")).GroupBy(item => item.Year).ToList();
+foreach (var s in result.OrderBy(item => item.Key))
 {
-    Console.WriteLine($"Sanatçı Adı: {s.FullName}, Yapılan Müzikk Türü: {s.MusicGenre}");
+    Console.WriteLine($"Çıkış Yılı: {s.Key}");
+    foreach (var item in s.OrderBy(item => item.FullName))
+    {
+        Console.WriteLine($"{item.FullName}");
+    }
 }
 
 //En çok albüm satan şarkıcı
