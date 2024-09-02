@@ -1,1 +1,0 @@
-#Listeden nesne türeterek Linq ile içersinde sorgular yaptýk.
